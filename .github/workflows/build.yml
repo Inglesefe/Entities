@@ -10,7 +10,7 @@ jobs:
     runs-on: [self-hosted, '${{ github.ref_name }}']
     env:
       solution: Entities
-      version: ${{ fromJSON(["1.0.${{ github.run_number }}", "1.0.${{ github.run_number }}-${{ github.ref_name }}"])[github.ref_name == 'dev' || github.ref_name == 'test'] }}
+      version: ${{ fromJSON('["1.0.${{ github.run_number }}", "1.0.${{ github.run_number }}-${{ github.ref_name }}"]')[github.ref_name == 'dev' || github.ref_name == 'test'] }}
       username: leandrobaena@gmail.com
       sonarQubeKey: sqa_c24b73b519e482496ce1070a56f68c87a1c384c5
     steps:

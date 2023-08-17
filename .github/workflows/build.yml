@@ -10,7 +10,7 @@ jobs:
     runs-on: [self-hosted, '${{ github.ref_name }}']
     env:
       solution: Entities
-      version: 1.0.${{ github.run_number }}
+      version: 1.0.${{ github.run_number }}${{ (github.name == 'dev' || github.name == 'test') && '-' + github.name || ''  }}
       username: leandrobaena@gmail.com
       sonarQubeKey: sqa_c24b73b519e482496ce1070a56f68c87a1c384c5
     steps:
@@ -20,14 +20,6 @@ jobs:
         fetch-depth: 0
 
     - name: Corregir versión del paquete
-      if: ${{ github.ref_name == 'dev' || github.ref_name == 'test' }}
-      uses: prabhakarareddygaddam-mcd/replace-action@1.0.0
-      with:
-        files: ${{ env.solution }}/${{ env.solution }}.csproj
-        replacements: 1.0.0=${{ env.version }}-${{ github.ref_name }}
-
-    - name: Corregir versión del paquete
-      if: ${{ github.ref_name == 'main' }}
       uses: prabhakarareddygaddam-mcd/replace-action@1.0.0
       with:
         files: ${{ env.solution }}/${{ env.solution }}.csproj

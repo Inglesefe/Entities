@@ -10,9 +10,8 @@ jobs:
     runs-on: [self-hosted, '${{ github.ref_name }}']
     env:
       solution: Entities
-      version_dev: 1.0.${{ github.run_number }}-dev
-      version_test: 1.0.${{ github.run_number }}-test
-      version_main: 1.0.${{ github.run_number }}
+      version: 1.0.${{ github.run_number }}
+      versionSuffix: ${{ github.ref_name }}
       username: leandrobaena@gmail.com
       sonarQubeKey: sqa_c24b73b519e482496ce1070a56f68c87a1c384c5
     steps:
@@ -20,27 +19,6 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-
-    - name: Corregir versión del paquete
-      if: ${{ github.ref_name == 'dev' }}
-      uses: prabhakarareddygaddam-mcd/replace-action@1.0.0
-      with:
-        files: ${{ env.solution }}/${{ env.solution }}.csproj
-        replacements: 1.0.0=${{ env.version_dev }}
-
-    - name: Corregir versión del paquete
-      if: ${{ github.ref_name == 'test' }}
-      uses: prabhakarareddygaddam-mcd/replace-action@1.0.0
-      with:
-        files: ${{ env.solution }}/${{ env.solution }}.csproj
-        replacements: 1.0.0=${{ env.version_test }}
-
-    - name: Corregir versión del paquete
-      if: ${{ github.ref_name == 'main' }}
-      uses: prabhakarareddygaddam-mcd/replace-action@1.0.0
-      with:
-        files: ${{ env.solution }}/${{ env.solution }}.csproj
-        replacements: 1.0.0=${{ env.version_main }}
 
     - name: Eliminar repositorio previo
       continue-on-error: true
@@ -70,16 +48,17 @@ jobs:
       run: dotnet sonarscanner end /d:sonar.login="${{ env.sonarQubeKey }}"
 
     - name: Crear el paquete Nuget
-      run: dotnet pack -c Release ${{ env.solution }}.sln
+      if: ${{ github.ref_name == 'dev' || github.ref_name == 'test' }}
+      run: dotnet pack -c Release --version-suffix ${{ env.versionSuffix }} -p:PackageVersion=${{ env.version }} ${{ env.solution }}.sln
 
-    - name: Construir artefacto
-      if: ${{ github.ref_name == 'dev' }}
-      run: dotnet nuget push ${{ env.solution }}/bin/Release/${{ env.solution }}.${{ env.version_dev }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/inglesefe/index.json"
+    - name: Crear el paquete Nuget
+      if: ${{ github.ref_name == 'main' }}
+      run: dotnet pack -c Release -p:PackageVersion=${{ env.version }} ${{ env.solution }}.sln
 
-    - name: Construir artefacto
-      if: ${{ github.ref_name == 'test' }}
-      run: dotnet nuget push ${{ env.solution }}/bin/Release/${{ env.solution }}.${{ env.version_test }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/inglesefe/index.json"
+    - name: Construir artefacto dev
+      if: ${{ github.ref_name == 'dev' || github.ref_name == 'test' }}
+      run: dotnet nuget push ${{ env.solution }}/bin/Release/${{ env.solution }}.${{ env.version }}-${{ env.versionSuffix }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/inglesefe/index.json"
 
     - name: Construir artefacto
       if: ${{ github.ref_name == 'main' }}
-      run: dotnet nuget push ${{ env.solution }}/bin/Release/${{ env.solution }}.${{ env.version_main }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/inglesefe/index.json"
+      run: dotnet nuget push ${{ env.solution }}/bin/Release/${{ env.solution }}.${{ env.version }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/inglesefe/index.json"

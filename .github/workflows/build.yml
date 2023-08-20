@@ -50,11 +50,11 @@ jobs:
 
     - name: Finalizar SonarQube
       if: ${{ github.ref_name == 'dev' }}
-      run: dotnet sonarscanner end /d:sonar.token="${{ env.sonarQubeKey }}"
+      run: dotnet sonarscanner end /d:sonar.login="${{ env.sonarQubeKey }}"
 
     - name: Finalizar SonarQube
       if: ${{ github.ref_name == 'test' }}
-      run: dotnet sonarscanner end /d:sonar.token="${{ env.sonarQubeKeyTest }}"
+      run: dotnet sonarscanner end /d:sonar.login="${{ env.sonarQubeKeyTest }}"
 
     - name: Crear el paquete Nuget
       if: ${{ github.ref_name == 'dev' || github.ref_name == 'test' }}

@@ -30,11 +30,11 @@ jobs:
 
     - name: Inicializar SonarQube
       if: ${{ github.ref_name == 'dev' }}
-      run: dotnet sonarscanner begin /k:"${{ env.solution }}" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="${{ env.sonarQubeKey }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.scm.provider=git
+      run: dotnet sonarscanner begin /k:"${{ env.solution }}" /d:sonar.host.url="http://localhost:9000" /d:sonar.token="${{ env.sonarQubeKey }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
 
     - name: Inicializar SonarQube
       if: ${{ github.ref_name == 'test' }}
-      run: dotnet sonarscanner begin /k:"${{ env.solution }}" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="${{ env.sonarQubeKeyTest }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.scm.provider=git
+      run: dotnet sonarscanner begin /k:"${{ env.solution }}" /d:sonar.host.url="http://localhost:9000" /d:sonar.token="${{ env.sonarQubeKeyTest }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
 
     - name: Compilar la solución
       if: ${{ github.ref_name == 'dev' || github.ref_name == 'test'}}

@@ -22,7 +22,7 @@ namespace Entities.Test.Config
         [Fact]
         public void CreateCountry()
         {
-            Assert.IsType<Owner>(new Country());
+            Assert.IsType<Country>(new Country());
         }
 
         /// <summary>

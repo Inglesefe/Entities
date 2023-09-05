@@ -3,9 +3,14 @@
     /// <summary>
     /// Tipo de ingreso
     /// </summary>
-    public class IncomeType : EntityBase
+    public class IncomeType : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del tipo de ingreso
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Código del tipo de ingreso
         /// </summary>
@@ -21,8 +26,9 @@
         /// <summary>
         /// Crea un plan con valores por defecto
         /// </summary>
-        public IncomeType() : base()
+        public IncomeType()
         {
+            Id = 0;
             Code = string.Empty;
             Name = string.Empty;
         }

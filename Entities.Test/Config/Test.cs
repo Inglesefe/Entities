@@ -53,6 +53,15 @@ namespace Entities.Test.Config
         }
 
         /// <summary>
+        /// Prueba la creación de un parámetro
+        /// </summary>
+        [Fact]
+        public void CreateParamter()
+        {
+            Assert.IsType<Parameter>(new Parameter());
+        }
+
+        /// <summary>
         /// Prueba la creación de un plan
         /// </summary>
         [Fact]
@@ -62,12 +71,12 @@ namespace Entities.Test.Config
         }
 
         /// <summary>
-        /// Prueba la creación de un parámetro
+        /// Prueba la creación de una escala de comisiones
         /// </summary>
         [Fact]
-        public void CreateParamter()
+        public void CreateScale()
         {
-            Assert.IsType<Parameter>(new Parameter());
+            Assert.IsType<Scale>(new Scale());
         }
     }
 }

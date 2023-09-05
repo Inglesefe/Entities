@@ -3,9 +3,14 @@
     /// <summary>
     /// Rol al que pertenece un usuario dentro del sistema
     /// </summary>
-    public class Role : EntityBase
+    public class Role : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del rol
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Nombre del rol
         /// </summary>
@@ -16,8 +21,9 @@
         /// <summary>
         /// Crea un rol con valores por defecto
         /// </summary>
-        public Role() : base()
+        public Role()
         {
+            Id = 0;
             Name = string.Empty;
         }
         #endregion

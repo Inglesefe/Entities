@@ -3,9 +3,14 @@
     /// <summary>
     /// Registra una acción sobre un componente del sistema (I-Información o E-Error)
     /// </summary>
-    public class LogComponent : EntityBase
+    public class LogComponent : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del log del componente
+        /// </summary>
+        public long Id { get; set; }
+
         /// <summary>
         /// Fecha del registro
         /// </summary>
@@ -36,8 +41,9 @@
         /// <summary>
         /// Crea un registro de acción sobre la base de datos con valores por defecto
         /// </summary>
-        public LogComponent() : base()
+        public LogComponent()
         {
+            Id = 0;
             Date = DateTime.Now;
             Type = string.Empty;
             Component = string.Empty;

@@ -1,36 +1,30 @@
-﻿namespace Entities.Noti
+﻿namespace Entities.Config
 {
     /// <summary>
-    /// Plantilla de correo
+    /// Tipo de consecutivo contable que se quiere controlar
     /// </summary>
-    public class Template : IEntity
+    public class ConsecutiveType : IEntity
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la plantilla
+        /// Identificador único del tipo de cuenta
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Nombre de la plantilla
+        /// Nombre del tipo de cuenta contable
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Contenido html de la plantilla
-        /// </summary>
-        public string Content { get; set; }
         #endregion
 
         #region Constructors
         /// <summary>
-        /// Crea una plantilla con valores por defecto
+        /// Crea un tipo de cuenta con valores por defecto
         /// </summary>
-        public Template()
+        public ConsecutiveType()
         {
             Id = 0;
             Name = string.Empty;
-            Content = string.Empty;
         }
         #endregion
     }

@@ -3,9 +3,14 @@
     /// <summary>
     /// Parámetro del sistema
     /// </summary>
-    public class Parameter : EntityBase
+    public class Parameter : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del parámetro
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Nombre del parámetro
         /// </summary>
@@ -21,8 +26,9 @@
         /// <summary>
         /// Crea un consecutivo con valores por defecto
         /// </summary>
-        public Parameter() : base()
+        public Parameter()
         {
+            Id = 0;
             Name = string.Empty;
             Value = string.Empty;
         }

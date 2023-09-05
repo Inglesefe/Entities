@@ -3,9 +3,14 @@
     /// <summary>
     /// Tipo de identificación
     /// </summary>
-    public class IdentificationType : EntityBase
+    public class IdentificationType : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del tipo de identificación
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Nombre del tipo de identificación
         /// </summary>
@@ -16,7 +21,7 @@
         /// <summary>
         /// Crea un plan con valores por defecto
         /// </summary>
-        public IdentificationType() : base()
+        public IdentificationType()
         {
             Name = string.Empty;
         }

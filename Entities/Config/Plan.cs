@@ -3,9 +3,14 @@
     /// <summary>
     /// Plan de estudio
     /// </summary>
-    public class Plan : EntityBase
+    public class Plan : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único del plan
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Valor del plan
         /// </summary>
@@ -41,8 +46,9 @@
         /// <summary>
         /// Crea un plan con valores por defecto
         /// </summary>
-        public Plan() : base()
+        public Plan()
         {
+            Id = 0;
             Value = 0;
             InitialFee = 0;
             InstallmentsNumber = 0;

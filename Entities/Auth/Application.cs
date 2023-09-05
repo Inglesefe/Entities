@@ -4,9 +4,14 @@
     /// Aplicación a la que puede ingresar un usuario,
     /// también puede representar un módulo de una aplicación más grande
     /// </summary>
-    public class Application : EntityBase
+    public class Application : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único de la aplicación
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// Nombre de la aplicación
         /// </summary>
@@ -17,8 +22,9 @@
         /// <summary>
         /// Crea una aplicación con valores por defecto
         /// </summary>
-        public Application() : base()
+        public Application()
         {
+            Id = 0;
             Name = string.Empty;
         }
         #endregion

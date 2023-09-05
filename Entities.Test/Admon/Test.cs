@@ -1,4 +1,5 @@
 using Entities.Admon;
+using Entities.Crm;
 
 namespace Entities.Test.Admon
 {
@@ -40,7 +41,7 @@ namespace Entities.Test.Admon
         [Fact]
         public void CreateProdExecutive()
         {
-            Assert.IsType<ProdExecutive>(new ProdExecutive());
+            Assert.IsType<AccountExecutive>(new AccountExecutive());
         }
     }
 }

@@ -1,44 +1,56 @@
 ﻿using Entities.Config;
 
-namespace Entities.Admon
+namespace Entities.Crm
 {
     /// <summary>
-    /// Ejecutivo de producción de la matrícula
+    /// Beneficiario de la matrícula
     /// </summary>
-    public class ProdExecutive : EntityBase
+    public class Beneficiary : IEntity
     {
         #region Attributes
         /// <summary>
-        /// Oficina a la que pertenece un ejecutivo de producción
+        /// Identificador único del beneficiario
         /// </summary>
-        public Office Office { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
-        /// Nombre del ejecutivo de producción
+        /// Titular al que corresponde este beneficiario
+        /// </summary>
+        public Owner Owner { get; set; }
+
+        /// <summary>
+        /// Nombre del beneficiario
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Número de identificación del ejecutivo
+        /// Número de identificación del beneficiario
         /// </summary>
         public string Identification { get; set; }
 
         /// <summary>
-        /// Tipo de identificación del ejecutivo
+        /// Tipo de identificación
         /// </summary>
         public IdentificationType IdentificationType { get; set; }
+
+        /// <summary>
+        /// Relación con el titular
+        /// </summary>
+        public string Relationship { get; set; }
         #endregion
 
         #region Constructors
         /// <summary>
         /// Crea un titular con valores por defecto
         /// </summary>
-        public ProdExecutive() : base()
+        public Beneficiary()
         {
-            Office = new();
+            Id = 0;
+            Owner = new();
             Name = string.Empty;
             Identification = string.Empty;
             IdentificationType = new();
+            Relationship = string.Empty;
         }
         #endregion
     }

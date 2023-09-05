@@ -3,9 +3,13 @@
     /// <summary>
     /// Notificación de correo
     /// </summary>
-    public class Notification : EntityBase
+    public class Notification : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único de la notificación
+        /// </summary>
+        public long Id { get; set; }
 
         /// <summary>
         /// Fecha en que se hizo la notificación
@@ -37,8 +41,9 @@
         /// <summary>
         /// Crea una notificación con valores por defecto
         /// </summary>
-        public Notification() : base()
+        public Notification()
         {
+            Id = 0;
             Subject = string.Empty;
             To = string.Empty;
             Content = string.Empty;

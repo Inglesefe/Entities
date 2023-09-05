@@ -3,9 +3,14 @@
     /// <summary>
     /// Ciudad en el que tiene base la empresa
     /// </summary>
-    public class City : EntityBase
+    public class City : IEntity
     {
         #region Attributes
+        /// <summary>
+        /// Identificador único de la ciudad
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// País al que pertenece la ciudad
         /// </summary>
@@ -26,8 +31,9 @@
         /// <summary>
         /// Crea una ciudad con valores por defecto
         /// </summary>
-        public City() : base()
+        public City()
         {
+            Id = 0;
             Country = new();
             Name = string.Empty;
             Code = string.Empty;

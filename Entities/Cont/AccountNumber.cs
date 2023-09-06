@@ -20,6 +20,11 @@
         /// Ciudad asociada a la cuenta
         /// </summary>
         public City City { get; set; }
+
+        /// <summary>
+        /// Número de la cuenta contable
+        /// </summary>
+        public string Number { get; set; }
         #endregion
 
         #region Constructors
@@ -31,6 +36,7 @@
             Id = 0;
             AccountType = new();
             City = new();
+            Number = string.Empty;
         }
         #endregion
     }

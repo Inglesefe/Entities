@@ -22,14 +22,24 @@
         public string Type { get; set; }
 
         /// <summary>
-        /// Componente sobre el que se realizó la acción
+        /// Controlador del API sobre el que se realizó la acción
         /// </summary>
-        public string Component { get; set; }
+        public string Controller { get; set; }
 
         /// <summary>
-        /// Descripción de lo que se realizó
+        /// Método del controlador del API sobre el que se realizó la acción
         /// </summary>
-        public string Description { get; set; }
+        public string Method { get; set; }
+
+        /// <summary>
+        /// Datos de entrada del componente de lo que se realizó
+        /// </summary>
+        public string Input { get; set; }
+
+        /// <summary>
+        /// Datos de salida del componente de lo que se realizó
+        /// </summary>
+        public string Output { get; set; }
 
         /// <summary>
         /// Identificador del usuario que realizó la acción
@@ -46,8 +56,10 @@
             Id = 0;
             Date = DateTime.Now;
             Type = string.Empty;
-            Component = string.Empty;
-            Description = string.Empty;
+            Controller = string.Empty;
+            Method = string.Empty;
+            Input = string.Empty;
+            Output = string.Empty;
             User = 0;
         }
         #endregion

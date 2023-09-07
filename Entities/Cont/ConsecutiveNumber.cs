@@ -20,6 +20,11 @@
         /// Ciudad asociada al consecutivo
         /// </summary>
         public City City { get; set; }
+
+        /// <summary>
+        /// Número del consecutivo contable
+        /// </summary>
+        public string Number { get; set; }
         #endregion
 
         #region Constructors
@@ -31,6 +36,7 @@
             Id = 0;
             ConsecutiveType = new();
             City = new();
+            Number = string.Empty;
         }
         #endregion
     }

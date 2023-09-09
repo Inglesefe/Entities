@@ -24,5 +24,14 @@ namespace Entities.Test.Admon
         {
             Assert.IsType<Registration>(new Registration());
         }
+
+        /// <summary>
+        /// Prueba la creación de la relación de una matrícula, escala y ejecutivo de cuenta
+        /// </summary>
+        [Fact]
+        public void CreateRegistrationScale()
+        {
+            Assert.IsType<RegistrationScale>(new RegistrationScale());
+        }
     }
 }

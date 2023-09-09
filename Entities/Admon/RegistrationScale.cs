@@ -14,6 +14,11 @@ namespace Entities.Admon
         public int Id { get; set; }
 
         /// <summary>
+        /// MAtrícula a la que pertenece la relación
+        /// </summary>
+        public Registration Registration { get; set; }
+
+        /// <summary>
         /// Escala asignada al ejecutivo de cuenta en la matrícula
         /// </summary>
         public Scale Scale { get; set; }
@@ -31,6 +36,7 @@ namespace Entities.Admon
         public RegistrationScale()
         {
             Id = 0;
+            Registration = new();
             Scale = new();
             AccountExecutive = new();
         }

@@ -15,5 +15,14 @@ namespace Entities.Test.Admon
         {
             Assert.IsType<AccountExecutive>(new AccountExecutive());
         }
+
+        /// <summary>
+        /// Prueba la creación de una matrícula
+        /// </summary>
+        [Fact]
+        public void CreateRegistration()
+        {
+            Assert.IsType<Registration>(new Registration());
+        }
     }
 }

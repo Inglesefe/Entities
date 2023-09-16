@@ -1,4 +1,4 @@
-﻿using Entities.Config;
+﻿using Entities.Cont;
 
 namespace Entities.Test.Cont
 {

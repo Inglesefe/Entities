@@ -1,4 +1,4 @@
-﻿namespace Entities.Config
+﻿namespace Entities.Cont
 {
     /// <summary>
     /// Tipo de consecutivo contable que se quiere controlar

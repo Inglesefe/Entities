@@ -1,4 +1,6 @@
-﻿namespace Entities.Config
+﻿using Entities.Config;
+
+namespace Entities.Cont
 {
     /// <summary>
     /// Número de cuenta contable ascociada a un tipo de cuenta y a una ciudad

@@ -1,4 +1,6 @@
-﻿namespace Entities.Config
+﻿using Entities.Config;
+
+namespace Entities.Cont
 {
     /// <summary>
     /// Número de consecutivo contable ascociado a un tipo de consecutivo y a una ciudad

@@ -12,6 +12,11 @@
         public int Id { get; set; }
 
         /// <summary>
+        /// Código de la escala
+        /// </summary>
+        public string Code { get; set; }
+
+        /// <summary>
         /// Nombre de la escala
         /// </summary>
         public string Name { get; set; }
@@ -22,9 +27,9 @@
         public int Comission { get; set; }
 
         /// <summary>
-        /// Fecha en que entra en vigencia las escalas
+        /// Orden en que se muestra la escala en la matrícula
         /// </summary>
-        public DateTime Validity { get; set; }
+        public short Order { get; set; }
         #endregion
 
         #region Constructors
@@ -34,9 +39,10 @@
         public Scale()
         {
             Id = 0;
+            Code = string.Empty;
             Name = string.Empty;
             Comission = 0;
-            Validity = DateTime.MinValue;
+            Order = 0;
         }
         #endregion
     }

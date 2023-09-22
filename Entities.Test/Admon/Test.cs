@@ -33,5 +33,14 @@ namespace Entities.Test.Admon
         {
             Assert.IsType<RegistrationScale>(new RegistrationScale());
         }
+
+        /// <summary>
+        /// Prueba la creación de la cuota de una matrícula
+        /// </summary>
+        [Fact]
+        public void CreateFee()
+        {
+            Assert.IsType<Fee>(new Fee());
+        }
     }
 }

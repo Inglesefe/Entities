@@ -42,5 +42,14 @@ namespace Entities.Test.Cont
         {
             Assert.IsType<ConsecutiveType>(new ConsecutiveType());
         }
+
+        /// <summary>
+        /// Prueba la creación de un pago
+        /// </summary>
+        [Fact]
+        public void CreatePayment()
+        {
+            Assert.IsType<Payment>(new Payment());
+        }
     }
 }

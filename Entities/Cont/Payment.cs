@@ -38,6 +38,11 @@ namespace Entities.Cont
         /// Factura correspondiente al pago
         /// </summary>
         public string Invoice { get; set; }
+
+        /// <summary>
+        /// Comprobante del pago
+        /// </summary>
+        public string Proof { get; set; }
         #endregion
 
         #region Constructors
@@ -52,6 +57,7 @@ namespace Entities.Cont
             Value = 0;
             Date = DateTime.Now;
             Invoice = string.Empty;
+            Proof = string.Empty;
         }
         #endregion
     }

@@ -7,7 +7,7 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del ejecutivo de cuenta
+        /// Identificador único de la escala
         /// </summary>
         public int Id { get; set; }
 

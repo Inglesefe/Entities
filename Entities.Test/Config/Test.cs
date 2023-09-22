@@ -62,6 +62,15 @@ namespace Entities.Test.Config
         }
 
         /// <summary>
+        /// Prueba la creación de un tipo de pago
+        /// </summary>
+        [Fact]
+        public void CreatePaymentType()
+        {
+            Assert.IsType<PaymentType>(new PaymentType());
+        }
+
+        /// <summary>
         /// Prueba la creación de un plan
         /// </summary>
         [Fact]

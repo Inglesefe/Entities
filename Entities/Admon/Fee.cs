@@ -9,11 +9,6 @@ namespace Entities.Admon
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la cuota
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Matrícula a la que pertenece la cuota
         /// </summary>
         public Registration Registration { get; set; }
@@ -43,9 +38,8 @@ namespace Entities.Admon
         /// <summary>
         /// Crea una cuota con valores por defecto
         /// </summary>
-        public Fee()
+        public Fee() : base()
         {
-            Id = 0;
             Registration = new();
             Value = 0;
             Number = 0;

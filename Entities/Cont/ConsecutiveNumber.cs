@@ -9,11 +9,6 @@ namespace Entities.Cont
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del número de consecutivo
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Tipo de consecutivo contable
         /// </summary>
         public ConsecutiveType ConsecutiveType { get; set; }
@@ -33,9 +28,8 @@ namespace Entities.Cont
         /// <summary>
         /// Crea un número de consecutivo con valores por defecto
         /// </summary>
-        public ConsecutiveNumber()
+        public ConsecutiveNumber() : base()
         {
-            Id = 0;
             ConsecutiveType = new();
             City = new();
             Number = string.Empty;

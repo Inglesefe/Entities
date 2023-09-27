@@ -7,10 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del país
-        /// </summary>
-        public int Id { get; set; }
-        /// <summary>
         /// Código del país
         /// </summary>
         public string Code { get; set; }
@@ -27,7 +23,6 @@
         /// </summary>
         public Country() : base()
         {
-            Id = 0;
             Code = string.Empty;
             Name = string.Empty;
         }

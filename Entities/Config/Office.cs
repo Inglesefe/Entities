@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la oficina
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Ciudad a la que pertenece la oficina
         /// </summary>
         public City City { get; set; }
@@ -41,9 +36,8 @@
         /// <summary>
         /// Crea una ciudad con valores por defecto
         /// </summary>
-        public Office()
+        public Office() : base()
         {
-            Id = 0;
             City = new();
             Name = string.Empty;
             Address = string.Empty;

@@ -9,11 +9,6 @@ namespace Entities.Cont
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del número de cuenta
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Tipo de cuenta contable
         /// </summary>
         public AccountType AccountType { get; set; }
@@ -33,9 +28,8 @@ namespace Entities.Cont
         /// <summary>
         /// Crea un número de cuenta con valores por defecto
         /// </summary>
-        public AccountNumber()
+        public AccountNumber() : base()
         {
-            Id = 0;
             AccountType = new();
             City = new();
             Number = string.Empty;

@@ -9,11 +9,6 @@ namespace Entities.Admon
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la relación
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// MAtrícula a la que pertenece la relación
         /// </summary>
         public Registration Registration { get; set; }
@@ -33,9 +28,8 @@ namespace Entities.Admon
         /// <summary>
         /// Crea un titular con valores por defecto
         /// </summary>
-        public RegistrationScale()
+        public RegistrationScale() : base()
         {
-            Id = 0;
             Registration = new();
             Scale = new();
             AccountExecutive = new();

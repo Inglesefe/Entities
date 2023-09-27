@@ -10,11 +10,6 @@ namespace Entities.Admon
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la matrícula
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Oficina en la que se realizó la matrícula
         /// </summary>
         public Office Office { get; set; }
@@ -54,9 +49,8 @@ namespace Entities.Admon
         /// <summary>
         /// Crea un titular con valores por defecto
         /// </summary>
-        public Registration()
+        public Registration() : base()
         {
-            Id = 0;
             Office = new();
             Date = DateTime.MinValue;
             ContractNumber = string.Empty;

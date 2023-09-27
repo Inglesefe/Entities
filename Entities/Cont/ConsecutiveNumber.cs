@@ -5,7 +5,7 @@ namespace Entities.Cont
     /// <summary>
     /// Número de consecutivo contable ascociado a un tipo de consecutivo y a una ciudad
     /// </summary>
-    public class ConsecutiveNumber : IEntity
+    public class ConsecutiveNumber : Entity
     {
         #region Attributes
         /// <summary>

@@ -3,7 +3,7 @@
     /// <summary>
     /// Tipo de consecutivo contable que se quiere controlar
     /// </summary>
-    public class ConsecutiveType : IEntity
+    public class ConsecutiveType : Entity
     {
         #region Attributes
         /// <summary>

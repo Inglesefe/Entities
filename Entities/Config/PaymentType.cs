@@ -3,7 +3,7 @@
     /// <summary>
     /// Tipos de pago
     /// </summary>
-    public class PaymentType : IEntity
+    public class PaymentType : Entity
     {
         #region Attributes
         /// <summary>

@@ -5,7 +5,7 @@ namespace Entities.Crm
     /// <summary>
     /// Titular de una matrícula
     /// </summary>
-    public class Owner : IEntity
+    public class Owner : Entity
     {
         #region Attributes
         /// <summary>

@@ -5,7 +5,7 @@ namespace Entities.Admon
     /// <summary>
     /// Cuotas de la matricula según el plan seleccionado
     /// </summary>
-    public class Fee : IEntity
+    public class Fee : Entity
     {
         #region Attributes
         /// <summary>

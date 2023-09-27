@@ -3,7 +3,7 @@
     /// <summary>
     /// Escala de comisiones
     /// </summary>
-    public class Scale : IEntity
+    public class Scale : Entity
     {
         #region Attributes
         /// <summary>

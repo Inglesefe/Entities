@@ -3,7 +3,7 @@
     /// <summary>
     /// Registra una acción sobre un componente del sistema (I-Información o E-Error)
     /// </summary>
-    public class LogComponent : IEntity
+    public class LogComponent : Entity
     {
         #region Attributes
         /// <summary>

@@ -3,5 +3,5 @@
     /// <summary>
     /// Clase padre de la jerarquía de entidades
     /// </summary>
-    public interface IEntity { }
+    public abstract class Entity { }
 }

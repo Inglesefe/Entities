@@ -42,3 +42,9 @@ jobs:
     - name: Instalar scanner SonarCloud
       if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       run: 'dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner'
+      
+    - name: Inicializar SonarQube
+      run: dotnet-sonarscanner begin /k:"Inglesefe_Entities" /o:"inglesefe" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+
+    - name: Compilar la solución
+      run: dotnet build ${{ env.solution }}.sln -c Debug

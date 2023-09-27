@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la notificación
-        /// </summary>
-        public long Id { get; set; }
-
-        /// <summary>
         /// Fecha en que se hizo la notificación
         /// </summary>
         public DateTime Date { get; set; }
@@ -41,9 +36,8 @@
         /// <summary>
         /// Crea una notificación con valores por defecto
         /// </summary>
-        public Notification()
+        public Notification() : base()
         {
-            Id = 0;
             Subject = string.Empty;
             To = string.Empty;
             Content = string.Empty;

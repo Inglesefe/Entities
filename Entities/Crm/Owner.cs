@@ -9,11 +9,6 @@ namespace Entities.Crm
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del titular
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre del titular
         /// </summary>
         public string Name { get; set; }
@@ -58,9 +53,8 @@ namespace Entities.Crm
         /// <summary>
         /// Crea un titular con valores por defecto
         /// </summary>
-        public Owner()
+        public Owner() : base()
         {
-            Id = 0;
             Name = string.Empty;
             Identification = string.Empty;
             IdentificationType = new();

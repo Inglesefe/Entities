@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del log del componente
-        /// </summary>
-        public long Id { get; set; }
-
-        /// <summary>
         /// Fecha del registro
         /// </summary>
         public DateTime Date { get; set; }
@@ -51,9 +46,8 @@
         /// <summary>
         /// Crea un registro de acción sobre la base de datos con valores por defecto
         /// </summary>
-        public LogComponent()
+        public LogComponent() : base()
         {
-            Id = 0;
             Date = DateTime.Now;
             Type = string.Empty;
             Controller = string.Empty;

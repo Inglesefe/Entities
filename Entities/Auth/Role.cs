@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del rol
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre del rol
         /// </summary>
         public string Name { get; set; }
@@ -21,9 +16,8 @@
         /// <summary>
         /// Crea un rol con valores por defecto
         /// </summary>
-        public Role()
+        public Role() : base()
         {
-            Id = 0;
             Name = string.Empty;
         }
         #endregion

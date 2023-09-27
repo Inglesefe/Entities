@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la plantilla
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre de la plantilla
         /// </summary>
         public string Name { get; set; }
@@ -26,9 +21,8 @@
         /// <summary>
         /// Crea una plantilla con valores por defecto
         /// </summary>
-        public Template()
+        public Template() : base()
         {
-            Id = 0;
             Name = string.Empty;
             Content = string.Empty;
         }

@@ -8,11 +8,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la aplicación
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre de la aplicación
         /// </summary>
         public string Name { get; set; }
@@ -22,9 +17,8 @@
         /// <summary>
         /// Crea una aplicación con valores por defecto
         /// </summary>
-        public Application()
+        public Application() : base()
         {
-            Id = 0;
             Name = string.Empty;
         }
         #endregion

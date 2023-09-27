@@ -3,7 +3,7 @@
     /// <summary>
     /// Plan de estudio
     /// </summary>
-    public class Plan : IEntity
+    public class Plan : Entity
     {
         #region Attributes
         /// <summary>

@@ -5,7 +5,7 @@ namespace Entities.Admon
     /// <summary>
     /// Ejecutivo de cuenta
     /// </summary>
-    public class AccountExecutive : IEntity
+    public class AccountExecutive : Entity
     {
         #region Attributes
         /// <summary>

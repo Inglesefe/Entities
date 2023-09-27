@@ -3,7 +3,7 @@
     /// <summary>
     /// Ciudad en el que tiene base la empresa
     /// </summary>
-    public class City : IEntity
+    public class City : Entity
     {
         #region Attributes
         /// <summary>

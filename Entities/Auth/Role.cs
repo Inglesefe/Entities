@@ -3,7 +3,7 @@
     /// <summary>
     /// Rol al que pertenece un usuario dentro del sistema
     /// </summary>
-    public class Role : IEntity
+    public class Role : Entity
     {
         #region Attributes
         /// <summary>

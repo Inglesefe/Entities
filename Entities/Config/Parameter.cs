@@ -3,7 +3,7 @@
     /// <summary>
     /// Parámetro del sistema
     /// </summary>
-    public class Parameter : IEntity
+    public class Parameter : Entity
     {
         #region Attributes
         /// <summary>

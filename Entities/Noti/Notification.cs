@@ -3,7 +3,7 @@
     /// <summary>
     /// Notificación de correo
     /// </summary>
-    public class Notification : IEntity
+    public class Notification : Entity
     {
         #region Attributes
         /// <summary>

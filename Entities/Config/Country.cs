@@ -3,7 +3,7 @@
     /// <summary>
     /// País en el que tiene base la empresa
     /// </summary>
-    public class Country : IEntity
+    public class Country : Entity
     {
         #region Attributes
         /// <summary>

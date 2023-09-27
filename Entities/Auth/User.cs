@@ -3,7 +3,7 @@
     /// <summary>
     /// Usuario que se conecta a la aplicación
     /// </summary>
-    public class User : IEntity
+    public class User : Entity
     {
         #region Attributes
         /// <summary>

@@ -5,7 +5,7 @@ namespace Entities.Admon
     /// <summary>
     /// Relación entre una matrícula de un estudiante, una escala y el ejecutivo de cuenta al que se le asigna
     /// </summary>
-    public class RegistrationScale : IEntity
+    public class RegistrationScale : Entity
     {
         #region Attributes
         /// <summary>

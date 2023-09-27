@@ -40,5 +40,5 @@ jobs:
         restore-keys: ${{ runner.os }}-sonar-scanner
     
     - name: Instalar scanner SonarCloud
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        run: 'dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner'
+      if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+      run: 'dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner'

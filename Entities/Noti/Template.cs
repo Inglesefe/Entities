@@ -3,7 +3,7 @@
     /// <summary>
     /// Plantilla de correo
     /// </summary>
-    public class Template : IEntity
+    public class Template : Entity
     {
         #region Attributes
         /// <summary>

@@ -3,7 +3,7 @@
     /// <summary>
     /// Oficina en una ciudad
     /// </summary>
-    public class Office : IEntity
+    public class Office : Entity
     {
         #region Attributes
         /// <summary>

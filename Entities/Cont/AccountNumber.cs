@@ -5,7 +5,7 @@ namespace Entities.Cont
     /// <summary>
     /// Número de cuenta contable ascociada a un tipo de cuenta y a una ciudad
     /// </summary>
-    public class AccountNumber : IEntity
+    public class AccountNumber : Entity
     {
         #region Attributes
         /// <summary>

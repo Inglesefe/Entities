@@ -5,7 +5,7 @@ namespace Entities.Crm
     /// <summary>
     /// Beneficiario de la matrícula
     /// </summary>
-    public class Beneficiary : IEntity
+    public class Beneficiary : Entity
     {
         #region Attributes
         /// <summary>

@@ -3,7 +3,7 @@
     /// <summary>
     /// Tipo de ingreso
     /// </summary>
-    public class IncomeType : IEntity
+    public class IncomeType : Entity
     {
         #region Attributes
         /// <summary>

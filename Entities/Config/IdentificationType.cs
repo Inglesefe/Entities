@@ -3,7 +3,7 @@
     /// <summary>
     /// Tipo de identificación
     /// </summary>
-    public class IdentificationType : IEntity
+    public class IdentificationType : Entity
     {
         #region Attributes
         /// <summary>

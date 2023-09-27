@@ -6,7 +6,7 @@ namespace Entities.Admon
     /// <summary>
     /// Matrícula de un estudiante de los cursos de inglés ofrecidos por la empresa
     /// </summary>
-    public class Registration : IEntity
+    public class Registration : Entity
     {
         #region Attributes
         /// <summary>

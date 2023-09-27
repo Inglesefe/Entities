@@ -3,7 +3,7 @@
     /// <summary>
     /// Registra una acción sobre la base de datos (I-Insertar, U-Actualizar o D-Eliminar)
     /// </summary>
-    public class LogDb : IEntity
+    public class LogDb : Entity
     {
         #region Attributes
         /// <summary>

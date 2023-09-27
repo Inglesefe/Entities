@@ -6,7 +6,7 @@ namespace Entities.Cont
     /// <summary>
     /// Pago realizado a una cuota de una matrícula
     /// </summary>
-    public class Payment : IEntity
+    public class Payment : Entity
     {
         #region Attributes
         /// <summary>

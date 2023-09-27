@@ -4,7 +4,7 @@
     /// Aplicación a la que puede ingresar un usuario,
     /// también puede representar un módulo de una aplicación más grande
     /// </summary>
-    public class Application : IEntity
+    public class Application : Entity
     {
         #region Attributes
         /// <summary>

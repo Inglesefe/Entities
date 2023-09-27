@@ -3,7 +3,7 @@
     /// <summary>
     /// Tipo de cuenta contable que se quiere registrar
     /// </summary>
-    public class AccountType : IEntity
+    public class AccountType : Entity
     {
         #region Attributes
         /// <summary>

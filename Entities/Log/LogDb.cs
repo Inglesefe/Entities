@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del log de base de datos
-        /// </summary>
-        public long Id { get; set; }
-
-        /// <summary>
         /// Fecha del registro
         /// </summary>
         public DateTime Date { get; set; }
@@ -47,9 +42,8 @@
         /// <summary>
         /// Crea un registro de acción sobre la base de datos con valores por defecto
         /// </summary>
-        public LogDb()
+        public LogDb() : base()
         {
-            Id = 0;
             Date = DateTime.Now;
             Action = string.Empty;
             IdTable = 0;

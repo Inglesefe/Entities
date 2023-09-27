@@ -9,11 +9,6 @@ namespace Entities.Admon
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del ejecutivo de cuenta
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre del ejecutivo de producción
         /// </summary>
         public string Name { get; set; }
@@ -33,9 +28,8 @@ namespace Entities.Admon
         /// <summary>
         /// Crea un titular con valores por defecto
         /// </summary>
-        public AccountExecutive()
+        public AccountExecutive() : base()
         {
-            Id = 0;
             Name = string.Empty;
             Identification = string.Empty;
             IdentificationType = new();

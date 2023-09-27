@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del tipo de identificación
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre del tipo de identificación
         /// </summary>
         public string Name { get; set; }
@@ -21,9 +16,8 @@
         /// <summary>
         /// Crea un plan con valores por defecto
         /// </summary>
-        public IdentificationType()
+        public IdentificationType() : base()
         {
-            Id = 0;
             Name = string.Empty;
         }
         #endregion

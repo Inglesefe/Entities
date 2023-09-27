@@ -10,11 +10,6 @@ namespace Entities.Cont
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del pago
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Cuota de una matrícula a la que pertenece el pago
         /// </summary>
         public Fee Fee { get; set; }
@@ -49,9 +44,8 @@ namespace Entities.Cont
         /// <summary>
         /// Crea un pago con valores por defecto
         /// </summary>
-        public Payment()
+        public Payment() : base()
         {
-            Id = 0;
             Fee = new();
             PaymentType = new();
             Value = 0;

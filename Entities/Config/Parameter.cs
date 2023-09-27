@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único del parámetro
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Nombre del parámetro
         /// </summary>
         public string Name { get; set; }
@@ -26,9 +21,8 @@
         /// <summary>
         /// Crea un consecutivo con valores por defecto
         /// </summary>
-        public Parameter()
+        public Parameter() : base()
         {
-            Id = 0;
             Name = string.Empty;
             Value = string.Empty;
         }

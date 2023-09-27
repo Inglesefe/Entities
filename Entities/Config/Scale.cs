@@ -7,11 +7,6 @@
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la escala
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Código de la escala
         /// </summary>
         public string Code { get; set; }
@@ -36,9 +31,8 @@
         /// <summary>
         /// Crea una escala con valores por defecto
         /// </summary>
-        public Scale()
+        public Scale() : base()
         {
-            Id = 0;
             Code = string.Empty;
             Name = string.Empty;
             Comission = 0;
